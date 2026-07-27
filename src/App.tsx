@@ -13,7 +13,7 @@ function App() {
   return (
     <div style={{ padding: "20px" }}>
       <h1>Taylor Trent UI Garden</h1>
-      <p>THis is a test for sam</p>
+      <p>THis is a test for sam<p>
 
       <h2>Components</h2>
 
