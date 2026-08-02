@@ -71,11 +71,11 @@ function openLink(link: string) {
 function App() {
   return (
     <div
-  className="portfolio"
-  style={{
-    backgroundImage: 'url("/images/Galaxy.gif")',
-  }}
->
+      className="portfolio"
+      style={{
+        backgroundImage: 'url("/images/Galaxy.gif")',
+      }}
+    >
       <header className="site-header">
         <div className="header-content">
           <p className="header-label">Portfolio</p>
@@ -96,56 +96,49 @@ function App() {
 
       <main>
         <section id="about" className="portfolio-section">
-<div className="section-container about-container">
+          <div className="section-container about-container">
+            <div className="about-photo">
+              <Img src="/images/Trent.png" alt="Trent Taylor" />
+            </div>
 
-  <div className="about-photo">
-    <Img
-      src="/images/Trent.png"
-      alt="Trent Taylor"
-    />
-  </div>
+            <div className="about-text">
+              <h2>Basic Information</h2>
 
-  <div className="about-text">
+              <Text
+                text="I am a Full Stack Web Development student with experience creating front-end, back-end, database, testing, security, and deployment projects."
+                backgroundColor="transparent"
+              />
 
-    <h2>Basic Information</h2>
+              <Text
+                text="I have worked with React, TypeScript, Ruby on Rails, Python, Flask, SQL, PostgreSQL, Git, GitHub, and Docker."
+                backgroundColor="transparent"
+              />
 
-    <Text
-      text="I am a Full Stack Web Development student with experience creating front-end, back-end, database, testing, security, and deployment projects."
-      backgroundColor="transparent"
-    />
+              <Text
+                text="My professional interests include software development, cybersecurity, and game development."
+                backgroundColor="transparent"
+              />
 
-    <Text
-      text="I have worked with React, TypeScript, Ruby on Rails, Python, Flask, SQL, PostgreSQL, Git, GitHub, and Docker."
-      backgroundColor="transparent"
-    />
+              <div className="information-grid">
+                <Card
+                  title="Program"
+                  text="Full Stack Web Development"
+                  backgroundColor="#ffffff"
+                />
 
-    <Text
-      text="My professional interests include software development, cybersecurity, and game development."
-      backgroundColor="transparent"
-    />
+                <Card
+                  title="Location"
+                  text="Winnipeg, Manitoba"
+                  backgroundColor="#ffffff"
+                />
 
-    <div className="information-grid">
-      <Card
-        title="Program"
-        text="Full Stack Web Development"
-        backgroundColor="#ffffff"
-      />
-
-      <Card
-        title="Location"
-        text="Winnipeg, Manitoba"
-        backgroundColor="#ffffff"
-      />
-
-      <Card
-        title="Career Goal"
-        text="Build practical software and continue developing professional experience."
-        backgroundColor="#ffffff"
-      />
-    </div>
-
-  </div>
-
+                <Card
+                  title="Career Goal"
+                  text="Build practical software and continue developing professional experience."
+                  backgroundColor="#ffffff"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
