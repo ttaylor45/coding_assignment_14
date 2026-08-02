@@ -23,48 +23,19 @@ type Resource = {
 
 const projects: Project[] = [
   {
-    title: "React Component Library",
-    description:
-      "A reusable user interface component library created with React, TypeScript, Storybook, styled-components, and automated testing.",
-    image: "/images/component-library.png",
-    link: "https://github.com/ttaylor45",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Storybook",
-      "Styled Components",
-      "Jest",
-    ],
-  },
-  {
-    title: "Code Quality and CI/CD",
-    description:
-      "A React project using ESLint, Prettier, Husky, GitHub Actions, Docker, and Nginx to automate code quality and deployment.",
-    image: "/images/code-quality.png",
-    link: "https://github.com/ttaylor45",
-    technologies: [
-      "React",
-      "ESLint",
-      "Prettier",
-      "Husky",
-      "GitHub Actions",
-      "Docker",
-    ],
-  },
-  {
     title: "Pokémon on Rails",
     description:
       "A Ruby on Rails application for browsing and searching Pokémon, moves, abilities, and types stored in a relational database.",
-    image: "/images/pokemon-rails.png",
-    link: "https://github.com/ttaylor45",
+    image: "/images/Pokemon_Rails.png",
+    link: "https://github.com/ttaylor45/Pokemon-on-Rails",
     technologies: ["Ruby", "Ruby on Rails", "PostgreSQL", "HTML", "CSS"],
   },
   {
     title: "Tag Keys",
     description:
       "An e-commerce website for digital Steam game keys with products, categories, shopping carts, orders, and provincial taxes.",
-    image: "/images/tag-keys.png",
-    link: "https://github.com/ttaylor45/tag_keys",
+    image: "/images/Tag_keys.png",
+    link: "https://github.com/ttaylor45/Tag-Temepsi",
     technologies: ["Ruby on Rails", "PostgreSQL", "Git", "GitHub"],
   },
 ];
@@ -74,21 +45,21 @@ const resources: Resource[] = [
     title: "React Documentation",
     summary:
       "The official React documentation helped me learn components, properties, state, and application structure.",
-    image: "/images/react-icon.png",
+    image: "/images/React.png",
     link: "https://react.dev/",
   },
   {
     title: "Ruby on Rails Guides",
     summary:
       "The Rails Guides helped me learn models, controllers, views, migrations, validations, and associations.",
-    image: "/images/rails-icon.png",
+    image: "/images/Ruby.png",
     link: "https://guides.rubyonrails.org/",
   },
   {
     title: "Docker Documentation",
     summary:
       "Docker documentation helped me learn how to build images, run containers, expose ports, and deploy applications.",
-    image: "/images/docker-icon.png",
+    image: "/images/Docker.png",
     link: "https://docs.docker.com/",
   },
 ];
@@ -99,7 +70,12 @@ function openLink(link: string) {
 
 function App() {
   return (
-    <div className="portfolio">
+    <div
+  className="portfolio"
+  style={{
+    backgroundImage: 'url("/images/Galaxy.gif")',
+  }}
+>
       <header className="site-header">
         <div className="header-content">
           <p className="header-label">Portfolio</p>
@@ -120,43 +96,56 @@ function App() {
 
       <main>
         <section id="about" className="portfolio-section">
-          <div className="section-container">
-            <h2>Basic Information</h2>
+<div className="section-container about-container">
 
-            <Text
-              text="I am a Full Stack Web Development student with experience creating front-end, back-end, database, testing, security, and deployment projects."
-              backgroundColor="transparent"
-            />
+  <div className="about-photo">
+    <Img
+      src="/images/Trent.png"
+      alt="Trent Taylor"
+    />
+  </div>
 
-            <Text
-              text="I have worked with React, TypeScript, Ruby on Rails, Python, Flask, SQL, PostgreSQL, Git, GitHub, and Docker."
-              backgroundColor="transparent"
-            />
+  <div className="about-text">
 
-            <Text
-              text="My professional interests include software development, cybersecurity, and game development."
-              backgroundColor="transparent"
-            />
+    <h2>Basic Information</h2>
 
-            <div className="information-grid">
-              <Card
-                title="Program"
-                text="Full Stack Web Development"
-                backgroundColor="#ffffff"
-              />
+    <Text
+      text="I am a Full Stack Web Development student with experience creating front-end, back-end, database, testing, security, and deployment projects."
+      backgroundColor="transparent"
+    />
 
-              <Card
-                title="Location"
-                text="Winnipeg, Manitoba"
-                backgroundColor="#ffffff"
-              />
+    <Text
+      text="I have worked with React, TypeScript, Ruby on Rails, Python, Flask, SQL, PostgreSQL, Git, GitHub, and Docker."
+      backgroundColor="transparent"
+    />
 
-              <Card
-                title="Career Goal"
-                text="Build practical software and continue developing professional experience."
-                backgroundColor="#ffffff"
-              />
-            </div>
+    <Text
+      text="My professional interests include software development, cybersecurity, and game development."
+      backgroundColor="transparent"
+    />
+
+    <div className="information-grid">
+      <Card
+        title="Program"
+        text="Full Stack Web Development"
+        backgroundColor="#ffffff"
+      />
+
+      <Card
+        title="Location"
+        text="Winnipeg, Manitoba"
+        backgroundColor="#ffffff"
+      />
+
+      <Card
+        title="Career Goal"
+        text="Build practical software and continue developing professional experience."
+        backgroundColor="#ffffff"
+      />
+    </div>
+
+  </div>
+
           </div>
         </section>
 

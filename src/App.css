@@ -1,16 +1,22 @@
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
   margin: 0;
-  background-color: #f1f5f9;
-  color: #172033;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #050816;
+}
+
+.portfolio {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 button,
@@ -18,11 +24,18 @@ a {
   font: inherit;
 }
 
-.site-header {
-  padding: 80px 24px;
+.site-header,
+.portfolio-section,
+.site-footer {
   color: white;
-  text-align: center;
-  background: linear-gradient(135deg, #172033, #1d4ed8);
+}
+
+.section-container > h2,
+.section-container > p,
+.about-text,
+.about-text h2,
+.about-text p {
+  color: white;
 }
 
 .header-content {
@@ -70,10 +83,11 @@ nav a:hover {
 
 .portfolio-section {
   padding: 70px 24px;
+  background: rgba(8, 15, 35, 0.75);
 }
 
 .alternate-section {
-  background-color: #e2e8f0;
+  background: rgba(20, 25, 55, 0.80);
 }
 
 .section-container {
@@ -116,15 +130,23 @@ nav a:hover {
 
 .project-card {
   overflow: hidden;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgb(15 23 42 / 12%);
+  color: #172033;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3,
+.project-card h4,
+.project-card p {
+  color: #172033;
 }
 
 .project-image {
   height: 190px;
   overflow: hidden;
-  background-color: #cbd5e1;
+  background: transparent;
 }
 
 .project-image img {
@@ -161,8 +183,9 @@ nav a:hover {
 
 .technology-list li {
   padding: 6px 10px;
-  background-color: #dbeafe;
   color: #1e3a8a;
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
   border-radius: 20px;
   font-size: 0.85rem;
 }
@@ -170,14 +193,20 @@ nav a:hover {
 .skill-card,
 .resource-card {
   padding: 25px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgb(15 23 42 / 8%);
+  color: #172033;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .skill-card h3,
-.resource-card h3 {
-  margin-top: 0;
+.skill-card p,
+.skill-card li,
+.resource-card h3,
+.resource-card p,
+.resource-card li {
+  color: #172033;
 }
 
 .skill-card li {
@@ -212,7 +241,7 @@ nav a:hover {
   padding: 35px 24px;
   color: white;
   text-align: center;
-  background-color: #172033;
+  background: rgba(8, 15, 35, 0.85);
 }
 
 .site-footer button {
@@ -235,4 +264,50 @@ nav a:hover {
   nav a {
     width: 100%;
   }
+
+  .about-photo img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .about-text {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  flex: 1;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #60a5fa;
+  box-shadow:
+    0 0 20px #60a5fa,
+    0 0 40px #2563eb,
+    0 0 60px #1d4ed8;
+}
+
+.about-text {
+  flex: 2;
+  min-width: 280px;
+}
+
+.information-grid h3,
+.information-grid p,
+.setup-grid h3,
+.setup-grid p {
+  color: #172033 !important;
 }
