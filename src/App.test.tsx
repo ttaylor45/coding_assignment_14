@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders UI Garden heading", () => {
+test("renders portfolio heading", () => {
   render(<App />);
-  expect(screen.getByText("Taylor Trent UI Garden")).toBeInTheDocument();
+  expect(screen.getByText("Trent Taylor")).toBeInTheDocument();
 });
