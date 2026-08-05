@@ -1,172 +1,151 @@
-Assignment Overview
+# Coding Assignment 14 - Portfolio Website
 
-This assignment 13 is an extension of the UI Component Library created in Coding Assignment 12. The purpose of this assignment is to improve the assignment workflow by integrating code quality checks, continuous integration, and a production ready Docker deployment.
+## Overview
 
-Assignment Features
-React Component Library
+This project is a personal portfolio website built using React, TypeScript, and components developed throughout previous assignments. The website showcases projects completed during the Full Stack Web Development program, along with technical skills, learning resources, and my preferred development environment.
+
+The application is containerized using Docker and served with Nginx.
+
+## Features
+
+Personal introduction
+Portfolio projects
+Technical skills
+Learning resources
+Developer setup
+Responsive design
+Animated galaxy background
+Production Docker deployment
+
+## Technologies Used
+
+React
 TypeScript
-Storybook
-ESLint
-Prettier
-Husky Git Hooks
-GitHub Actions
+Styled Components
 Docker
 Nginx
-Prerequisites
-
-Before running this project, install the following software:
-
-Node.js (Version 20 or newer)
-npm
-Docker Desktop (or Docker Engine)
 Git
-Installing Dependencies
+GitHub
+ESLint
+Prettier
+Jest
+Storybook
 
-Clone the repository:
+# Prerequisites
 
-git clone https://github.com/ttaylor45/coding_assignment_13.git
+Before running the application, install:
 
-Enter the project folder:
+Docker Desktop
+Git
 
-cd coding_assignment_13
+# Clone the Repository
 
-Install the project dependencies:
+bash
+git clone https://github.com/ttaylor45/coding_assignment_14.git
+cd coding_assignment_14
 
+# Build the Docker Image
+
+bash
+docker build -t taylor_trent_coding_assignment14 .
+
+# Run the Docker Container
+
+bash
+docker run -d --name taylor_trent_coding_assignment14 -p 5575:5575 taylor_trent_coding_assignment14
+
+# View the Website
+
+Open your browser and navigate to:
+
+http://127.0.0.1:5575
+
+
+# Stop the Container
+
+bash
+docker stop taylor_trent_coding_assignment14
+
+# Start the Container Again
+
+bash
+docker start taylor_trent_coding_assignment14
+
+# Remove the Container
+
+bash
+docker rm -f taylor_trent_coding_assignment14
+
+# Development Mode
+
+Install dependencies:
+
+bash
 npm install
-Running the Application
 
 Start the React development server:
 
+bash
 npm start
 
-The application will be available at:
+Open:
 
 http://localhost:3000
-Running Storybook
 
-To view the UI components individually:
 
-npm run storybook
+# Build the React Application
 
-Storybook will run on:
+bash
+npm run build
 
-http://localhost:6006
-Code Quality Checks
-Format the Project
+# Run Quality Checks
 
-Automatically format the source code:
+bash
+npm run quality
 
-npm run format
 
-Check formatting without making changes:
+or individually:
 
+bash
 npm run format:check
-ESLint
-
-Run ESLint:
-
 npm run lint
-Automated Tests
-
-Run all Jest tests:
-
 npm run test:ci
-Run All Quality Checks
 
-Run every code quality check with a single command:
+# Portfolio Sections
 
-npm run quality
+The website contains the following sections:
 
-This command executes:
+Basic Information
+Work
+Skills
+Resources
+Developer Setup
 
-Prettier
-ESLint
-Jest Tests
+Each project includes:
 
-If any of these checks fail, the command exits with an error.
+Title
+Description
+Screenshot
+GitHub link
+Technologies used
 
-Husky Pre-Commit Hook
+# Developer
 
-Husky has been configured to automatically execute:
+**Trent Taylor**
 
-npm run quality
+Full Stack Web Development Student
 
-before every Git commit.
+GitHub:
 
-This ensures:
+https://github.com/ttaylor45
 
-Code formatting follows the project standard.
-ESLint detects code-quality issues.
-All tests pass.
+---
 
-If any of these checks fail, Git prevents the commit until the problems are corrected.
+# Assignment Requirements
 
-GitHub Actions (Continuous Integration)
+This project satisfies the Assignment 14 requirements by:
 
-GitHub Actions has been configured to automatically run on every push and pull request.
-
-The workflow performs the following steps:
-
-Install dependencies
-Run Prettier formatting checks
-Run ESLint
-Run automated tests
-Build the production React application
-
-This guarantees that all submitted code satisfies the same quality requirements enforced locally by Husky.
-
-Building the Docker Image
-
-Build the production Docker image:
-
-docker build -t taylor_trent_ui_garden_assignment13 .
-Running the Docker Container
-
-Run the container:
-
-docker run -d --name taylor_trent_coding_assignment13 -p 8018:8018 taylor_trent_ui_garden_assignment13
-
-Open the application:
-
-http://127.0.0.1:8018
-Docker Commands
-Stop the container
-docker stop taylor_trent_coding_assignment13
-Start the container
-docker start taylor_trent_coding_assignment13
-Restart the container
-docker restart taylor_trent_coding_assignment13
-Remove the container
-docker rm -f taylor_trent_coding_assignment13
-View running containers
-docker ps
-View all containers
-docker ps -a
-View Docker images
-docker images
-View container logs
-docker logs taylor_trent_coding_assignment13
-Rebuild the Docker image without using the cache
-docker build --no-cache -t taylor_trent_ui_garden_assignment13 .
-CI/CD Summary
-
-This assignment demonstrates a Continuous Integration (CI) workflow by combining local and remote quality checks.
-
-During development, Husky automatically verifies formatting, linting, and testing before allowing commits.
-
-After code is pushed to GitHub, GitHub Actions repeats the same validation steps to ensure that only code meeting the project's quality standards is accepted.
-
-Finally, Docker creates a production-ready React build that is served by Nginx on port 8018, providing a consistent deployment environment.
-
-Technologies Used
-React
-TypeScript
-Storybook
-Jest
-React Testing Library
-ESLint
-Prettier
-Husky
-GitHub Actions
-Docker
-Nginx
+Building upon the reusable component library from previous assignments.
+Creating a portfolio website using React.
+Deploying the production build with Docker and Nginx.
+Hosting the application at **127.0.0.1:5575**.
